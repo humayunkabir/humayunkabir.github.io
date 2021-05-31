@@ -39,7 +39,7 @@ export const getStaticProps = async (ctx) => {
 const ProjectDetails = ({ project }) => {
   return (
     <>
-      <Button href={`/`}>Back</Button>
+      <Button color="green" href={`/`}>Back</Button>
       <h1 className="text-3xl font-bold text-gray-700">
         {project.fields.title}
       </h1>

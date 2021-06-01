@@ -18,28 +18,43 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
 export const getStaticProps = async (ctx) => {
   const { slug } = ctx.params;
-  const response = await client.getEntries({
+  const {items} = await client.getEntries({
     content_type: 'portfolio',
     'fields.slug': slug,
   });
 
+  if(!items.length) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      }
+    }
+  }
+
   return {
     props: {
-      project: response.items[0],
+      project: items[0],
+      revalidate: 1,
     },
   };
 };
 
 const ProjectDetails = ({ project }) => {
+  if(!project) {
+    return <h1>Loading...</h1>
+  }
   return (
     <>
-      <Button color="green" href={`/`}>Back</Button>
+      <Button color="green" href={`/`}>
+        Back
+      </Button>
       <h1 className="text-3xl font-bold text-gray-700">
         {project.fields.title}
       </h1>

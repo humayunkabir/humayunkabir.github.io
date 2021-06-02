@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
       </Head>
       {/* <Navbar /> */}
       <Header />
-      <div className="container mx-auto py-16">{children}</div>
+      <div className="container mx-auto">{children}</div>
       <Footer />
     </>
   );

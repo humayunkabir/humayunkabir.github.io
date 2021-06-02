@@ -46,20 +46,35 @@ export const getStaticProps = async (ctx) => {
   };
 };
 
+import Image from 'next/image';
+
 const ProjectDetails = ({ project }) => {
   if (!project) {
     return <h1>Loading...</h1>;
   }
+
+  const { title, content, thumbnail } = project.fields;
+
   return (
-    <>
-      <Button color="green" href="/projects">
-        Back
-      </Button>
-      <h1 className="text-3xl font-bold text-gray-700">
-        {project.fields.title}
-      </h1>
-      <div className="border bg-indigo-100 border-indigo-900 rounded p-4">
-        {documentToReactComponents(project.fields.content)}
+    <div className="grid grid-cols-2 gap-8">
+      <div>
+        <div className="sticky top-32">
+          <Image
+            src={`https:${thumbnail.fields.file.url}`}
+            width={thumbnail.fields.file.details.image.width}
+            height={thumbnail.fields.file.details.image.height}
+            className="object-cover object-bottom rounded-lg"
+          />
+        </div>
+      </div>
+      <div>
+        <Button color="green" href="/projects">
+          Back
+        </Button>
+        <h1 className="text-3xl font-bold text-gray-700">{title}</h1>
+        <div className="border bg-indigo-100 border-indigo-900 rounded p-4">
+          {documentToReactComponents(content)}
+        </div>
       </div>
       <style jsx>
         {`
@@ -68,7 +83,7 @@ const ProjectDetails = ({ project }) => {
           }
         `}
       </style>
-    </>
+    </div>
   );
 };
 

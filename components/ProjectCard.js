@@ -6,19 +6,19 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div className="shadow-xl border rounded-lg">
-      {/* <img
+      <img
         src={`https:${thumbnail.fields.file.url}`}
         className="object-cover object-bottom w-full md:h-52 lg:h-80 xl:h-72"
-      /> */}
+      />
 
-      <Image
+      {/* <Image
         src={`https:${thumbnail.fields.file.url}`}
         width={thumbnail.fields.file.details.image.width}
         height={thumbnail.fields.file.details.image.height}
         className="object-cover object-bottom"
-      />
+      /> */}
       <div className="p-5 space-y-5 border-t">
-        <h1 className="text-xl font-bold text-gray-700 mb-0">{title}</h1>
+        <h1 className="text-xl font-bold text-gray-700 mb-0 truncate">{title}</h1>
         <Button href={`/projects/${slug}`}>Details</Button>
       </div>
     </div>

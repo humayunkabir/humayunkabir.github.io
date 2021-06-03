@@ -8,7 +8,7 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const response = await client.getEntries({
     content_type: 'portfolio',
   });
@@ -23,7 +23,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const { slug } = ctx.params;
   const { items } = await client.getEntries({
     content_type: 'portfolio',

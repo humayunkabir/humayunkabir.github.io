@@ -14,7 +14,7 @@ const Button = ({
   outline = false,
   ring = false,
   size = 'default',
-  className,
+  className = '',
   href,
   children,
   ...rest

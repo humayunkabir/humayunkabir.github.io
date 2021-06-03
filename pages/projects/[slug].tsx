@@ -1,3 +1,4 @@
+import { GetStaticProps, GetStaticPaths } from 'next';
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Button from '../../components/Button';
@@ -7,7 +8,7 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const response = await client.getEntries({
     content_type: 'portfolio',
   });
@@ -22,7 +23,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   const { slug } = ctx.params;
   const { items } = await client.getEntries({
     content_type: 'portfolio',

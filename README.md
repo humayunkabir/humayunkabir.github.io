@@ -9,4 +9,5 @@
   - [codepen](https://codepen.io/humayunkabir)
   - [jsfiddle](https://jsfiddle.net/user/humayunkabir)
   - [ui8](https://ui8.net/users/humayunkabir)
+  - [figma](https://www.figma.com/@humayunkabir)
   - [spectrum chat](https://spectrum.chat/users/humayunkabir)

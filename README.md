@@ -13,3 +13,4 @@
   - [figma](https://www.figma.com/@humayunkabir)
   - [spectrum chat](https://spectrum.chat/users/humayunkabir)
   - [docker](https://hub.docker.com/u/humayunkabir)
+  - [expo](https://expo.dev/@humayunkabir)

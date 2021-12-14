@@ -14,3 +14,4 @@
   - [spectrum chat](https://spectrum.chat/users/humayunkabir)
   - [docker](https://hub.docker.com/u/humayunkabir)
   - [expo](https://expo.dev/@humayunkabir)
+  - [reddit](https://www.reddit.com/user/humayunkabirdev)

@@ -17,6 +17,7 @@
   - [expo](https://expo.dev/@humayunkabir)
   - [reddit](https://www.reddit.com/user/humayunkabirdev)
   - [facebook](https://www.facebook.com/humayunkabirdev)
+  - [youtube](https://www.youtube.com/@humayunkabirdev)
   - [instagram](https://www.instagram.com/humayunkabirdev)
   - [linkedin](https://www.linkedin.com/in/humayunkabirdev)
   - [twitter](https://twitter.com/humayunkabirdev)
